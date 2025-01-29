@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Altice - Conexión y Entretenimiento</title>
+    <style>
+        /* Estilos básicos */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        header {
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #444;
+        }
+        .container {
+            padding: 20px;
+        }
+        .hero {
+            text-align: center;
+            background-color: #000;
+            color: #fff;
+            padding: 60px 20px;
+        }
+        .hero img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+        }
+        .services, .contact, .offers {
+            margin-top: 20px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .gallery img {
+            width: calc(33.333% - 10px);
+            height: auto;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <h1>Altice</h1>
+        <p>Conexión y Entretenimiento a Tu Alcance</p>
+    </header>
+
+    <!-- Navegación -->
+    <nav>
+        <a href="#home">Inicio</a>
+        <a href="#services">Servicios</a>
+        <a href="#offers">Ofertas</a>
+        <a href="#contact">Contacto</a>
+    </nav>
+
+    <!-- Sección Hero -->
+    <section class="hero">
+        <h2>Bienvenido a Altice</h2>
+        <p>La mejor cobertura, velocidad y entretenimiento para ti</p>
+        <img src="data:image/jpeg;base64,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" alt="Imagen promocional de Altice">
+    </section>
+
+    <!-- Contenido Principal -->
+    <div class="container">
+        <!-- Servicios -->
+        <section id="services" class="services">
+            <h2>Nuestros Servicios</h2>
+            <ul>
+                <li>Telefonía Móvil con cobertura nacional</li>
+                <li>Internet de alta velocidad para hogar y empresas</li>
+                <li>Televisión con contenido exclusivo</li>
+                <li>Soluciones corporativas personalizadas</li>
+            </ul>
+        </section>
+
+        <!-- Ofertas -->
+        <section id="offers" class="offers">
+            <h2>Ofertas Especiales</h2>
+            <div class="gallery">
+                <img src="https://www.altice.com.do/sites/default/files/styles/max_325x325/public/equipment_images/2024-04/TELHONORX6ABLUE64GB_0.png?itok=7kc49s8_" alt="Oferta 1">
+                <img src="https://www.altice.com.do/sites/default/files/styles/max_325x325/public/equipment_images/2024-04/TELSGALAXYA04SWHITE_0.png?itok=De9O37DE"alt="Oferta 2">
+                <img src="https://www.altice.com.do/sites/default/files/styles/max_325x325/public/equipment_images/2024-04/TELSGALAXYA04WHITE.png?itok=-yUO6m9Q" alt="Oferta 3">
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section id="contact" class="contact">
+            <h2>Contáctanos</h2>
+            <p>Atención al Cliente: +1 809-123-4567</p>
+            <p>Email: soporte@altice.com</p>
+            <p>Dirección: Calle Central, Santo Domingo, República Dominicana</p>
+        </section>
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 Altice. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

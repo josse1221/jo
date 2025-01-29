@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Suscripción | Walmart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0071CE;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 350px;
+            text-align: center;
+        }
+        .logo {
+            width: 150px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #0071CE;
+            margin-bottom: 15px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin: 10px 0 5px;
+            text-align: left;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background: #FFC220;
+            color: #333;
+            font-weight: bold;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #e6a800;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Walmart_logo.svg" alt="Walmart Logo" class="logo">
+        <h2>Formulario de Suscripción</h2>
+        <form action="procesar.php" method="POST">
+            <label for="cedula">Cédula:</label>
+            <input type="text" id="cedula" name="cedula" required pattern="\d{11}" title="Debe tener 11 dígitos numéricos">
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
+
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required pattern="\d{10}" title="Debe tener 10 dígitos numéricos">
+
+            <label for="sexo">Sexo:</label>
+            <select id="sexo" name="sexo" required>
+                <option value="">Seleccione</option>
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+                <option value="otro">Otro</option>
+            </select>
+
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
+
+            <button type="submit">Suscribirse</button>
+        </form>
+    </div>
+<br>
+<br>
+<section class="enlaces">
+<a href="idex11.html">Inicio</a>
+<a href="Productos y Servicios.html">Productos y Servicios</a>
+<a href="ofertas.html">Ofertas</a>
+<a href="Principal.html">Principal</a>
+</body>
+</html>
